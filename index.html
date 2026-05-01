@@ -1,117 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Isaac's World</title>
+    <title>Omyats & Zguats</title>
 
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PGDSBMTL');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PGDSBMTL');</script>
+
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
         body {
-            height: 100vh;
-            background-image: url("fondo 2.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
             color: white;
+        }
+
+        header {
+            padding: 20px;
             text-align: center;
+            background: linear-gradient(to right, #000, #111);
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
         }
 
-        h1 {
-            position: absolute;
-            top: 40px;
-            width: 100%;
-            font-size: 40px;
-            text-shadow: 0 0 10px white, 0 0 20px #00ccff;
-            z-index: 2;
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #00ccff;
         }
 
-        /* ⭐ Estrellas */
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: fall linear infinite;
+        header p {
+            margin-top: 10px;
+            color: #aaa;
         }
 
-        @keyframes fall {
-            from {
-                transform: translateY(-10px);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
+        .container {
+            padding: 30px;
         }
 
-        /* 🔥 BOTÓN */
-        button {
-            position: absolute;
-            bottom: 140px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 20px 50px;
+        .section-title {
+            margin-bottom: 20px;
             font-size: 22px;
-            font-weight: bold;
-            border: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
             border-radius: 12px;
-            background: rgba(0, 255, 200, 0.85);
-            color: black;
+            padding: 20px;
             cursor: pointer;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 0 20px rgba(0,0,0,0.6);
-            z-index: 3;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
 
-        button:hover {
-            background: rgba(0, 255, 200, 1);
-            transform: translateX(-50%) scale(1.05);
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0,255,200,0.3);
         }
 
-            </style>
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #aaa;
+        }
+
+        .characters {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
+<!-- GTM -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGDSBMTL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <h1>Isaac's World</h1>
 
-    <button onclick="goToBlog()">Enter Blog</button>
+<header>
+    <h1>Omyats & Zguats</h1>
+    <p>Una historia de guerra, poder y verdad oculta</p>
+</header>
 
-    <script>
-        function goToBlog() {
-            window.location.href = "blog.html";
-        }
+<div class="container">
 
-        // ⭐ Estrellas
-        for (let i = 0; i < 80; i++) {
-            let star = document.createElement("div");
-            star.classList.add("star");
+    <div class="section-title">📖 Capítulos</div>
 
-            star.style.left = Math.random() * 100 + "vw";
-            star.style.top = Math.random() * 100 + "vh";
-            star.style.animationDuration = (Math.random() * 5 + 3) + "s";
+    <div class="grid">
 
-            document.body.appendChild(star);
-        }
-    </script>
+        <div class="card" onclick="goToChapter('blog.html')">
+            <h3>Capítulo 1</h3>
+            <p>El primer golpe inicia el conflicto.</p>
+        </div>
+
+        <div class="card" onclick="goToChapter('chapter2.html')">
+            <h3>Capítulo 2</h3>
+            <p>La decisión que cambiará todo.</p>
+        </div>
+
+        <div class="card" onclick="goToChapter('chapter3.html')">
+            <h3>Capítulo 3</h3>
+            <p>Cautiverio y revelaciones.</p>
+        </div>
+
+    </div>
+
+    <div class="section-title characters">🧬 Personajes</div>
+
+    <div class="grid">
+
+        <div class="card" onclick="goToChapter('characters.html')">
+            <h3>Ver personajes</h3>
+            <p>Explora a los protagonistas de la historia.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function goToChapter(page) {
+    window.location.href = page;
+}
+</script>
 
 </body>
 </html>
