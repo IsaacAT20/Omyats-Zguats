@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capítulo 3: Cautiverio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            color: #e0e0e0;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: radial-gradient(circle at top, #0a0a0a, #000000 70%);
+        }
+
+        /* partículas */
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 12s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(100vh); opacity: 0; }
+            to { transform: translateY(-10vh); opacity: 1; }
+        }
+
+        /* luces */
+        .glow-blue {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0,200,255,0.2), transparent);
+            top: 10%;
+            left: 15%;
+            filter: blur(80px);
+        }
+
+        .glow-red {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,0,80,0.15), transparent);
+            bottom: 10%;
+            right: 15%;
+            filter: blur(80px);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 38px;
+            color: #00ccff;
+            text-shadow: 0 0 15px #00ccff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: rgba(0,0,0,0.65);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .dialog {
+            color: #00ffd5;
+            font-weight: 500;
+        }
+
+        .thought {
+            color: #9a9a9a;
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 40px 0;
+        }
+
+        /* BOTONES PRO */
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(6px);
+        }
+
+        .btn-back {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .btn-home {
+            background: rgba(0, 200, 255, 0.7);
+            color: black;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="glow-blue"></div>
+<div class="glow-red"></div>
+
+<h1>Capítulo 3: Cautiverio</h1>
+
+<div class="container">
+
+<p>La oscuridad no era total.</p>
+
+<p>ValAst despertó lentamente, con una sensación extraña recorriendo su cuerpo. No era dolor exactamente… era ausencia.</p>
+
+<p class="thought">Ausencia de control.</p>
+
+<p>Intentó mover los dedos.</p>
+
+<p>Nada.</p>
+
+<p>El aire a su alrededor… no respondía.</p>
+
+<p>Eso fue lo primero que lo alertó de verdad.</p>
+
+<p>Abrió los ojos de golpe.</p>
+
+<p>El techo sobre él era completamente blanco. Liso. Artificial. Sin textura, sin grietas, sin historia.</p>
+
+<p>No pertenecía a ningún mundo que conociera.</p>
+
+<p>Intentó incorporarse.</p>
+
+<p>Un impulso eléctrico recorrió sus brazos.</p>
+
+<p class="dialog">—No lo hagas —dijo una voz.</p>
+
+<p>ValAst apretó los dientes, conteniendo el movimiento.</p>
+
+<p>Bajó la mirada.</p>
+
+<p>Sus muñecas estaban sujetas por dispositivos metálicos que emitían una vibración constante, casi imperceptible… pero suficiente para bloquear su conexión.</p>
+
+<p class="thought">Inhibidores.</p>
+
+<p class="dialog">—Ya despertó —continuó la voz.</p>
+
+<p>ValAst giró el rostro.</p>
+
+<p>Tres humanos estaban frente a él.</p>
+
+<p>Pero no eran como los que había visto antes.</p>
+
+<p>No había trajes formales.</p>
+
+<p>No había máscaras diplomáticas.</p>
+
+<p>Ahora… no ocultaban nada.</p>
+
+<p>Sus armaduras eran ligeras, adaptadas al cuerpo, con líneas de energía recorriendo cada pieza como venas brillantes.</p>
+
+<p class="thought">Tecnología híbrida. Demasiado avanzada. Demasiado… familiar.</p>
+
+<p class="dialog">—Bienvenido —dijo el que parecía liderar—. A la verdad.</p>
+
+<p>ValAst no respondió.</p>
+
+<p>Buscó.</p>
+
+<p>Y lo encontró.</p>
+
+<p><strong>AkiR.</strong></p>
+
+<p>Estaba a unos metros, separada por una barrera transparente.</p>
+
+<p>Sus ojos se clavaron en los de él.</p>
+
+<p class="dialog">—¿Estás bien?</p>
+<p class="dialog">—Sigo viva.</p>
+
+<p>Era suficiente.</p>
+
+<p>Luego miró más allá.</p>
+
+<p><strong>JaFran.</strong></p>
+
+<p>En el suelo. Inmóvil.</p>
+
+<p class="dialog">—Padre…</p>
+
+<p class="dialog">—No pueden ayudarlo. Aún.</p>
+
+<p class="dialog">—Aléjate de él.</p>
+
+<p class="dialog">—Interesante… incluso sin poder… sigues siendo peligrosa.</p>
+
+<p class="dialog">—¿Qué quieren?</p>
+
+<p class="dialog">—Orden.</p>
+
+<p>Proyecciones aparecieron alrededor.</p>
+
+<p>Ciudades destruidas. Fuego. Viento. Caos.</p>
+
+<p class="dialog">—Esto… es su legado.</p>
+
+<p class="dialog">—Eso no es cierto.</p>
+
+<p class="dialog">—¿Entonces por qué estás aquí?</p>
+
+<p>Silencio.</p>
+
+<p class="dialog">—No hay buenos ni malos… solo consecuencias.</p>
+
+<p class="thought">AbiSaTi…</p>
+
+<p class="dialog">—Mienten.</p>
+
+<p class="dialog">—Omiten. Y eso es peor.</p>
+
+<p class="dialog">—Nada de esto cambia lo que hicieron.</p>
+
+<p class="dialog">—¿Estás segura de saber qué hicieron?</p>
+
+<p class="dialog">—¿Tú confías en esto?</p>
+
+<p class="dialog">—No… pero tampoco confío en lo que nos dijeron.</p>
+
+<p class="dialog">—Nos usaron.</p>
+
+<p class="dialog">—Sí.</p>
+
+<p class="dialog">—Finalmente… empiezan a entender.</p>
+
+<p class="dialog">—El problema no son ustedes… son quienes los dirigen.</p>
+
+<p class="dialog">—Y ustedes… van a detenerlo.</p>
+
+<p class="dialog">—¿Cómo?</p>
+
+<p class="dialog">—Eso depende de ustedes.</p>
+
+<p class="dialog">—Si muere… todos ustedes mueren.</p>
+
+<p class="dialog">—Entonces cooperen.</p>
+
+<p class="thought">Algo se rompió dentro de ValAst.</p>
+
+<p>No miedo. No rabia.</p>
+
+<p>Duda.</p>
+
+<p>Real.</p>
+
+<p>Peligrosa.</p>
+
+<p>Por primera vez…</p>
+
+<p>No eran enemigos.</p>
+
+<p>Eran piezas.</p>
+
+<p>En el mismo juego.</p>
+
+<p class="thought">Y ninguno entendía las reglas.</p>
+
+<p>Pero había algo peor.</p>
+
+<p>Mientras ellos comenzaban a cuestionar su mundo…</p>
+
+<p>los humanos ya habían ganado el primer movimiento.</p>
+
+<p class="thought">Y la verdad… no era completa.</p>
+
+<p>Era solo…</p>
+
+<p><strong>la versión que necesitaban que creyeran.</strong></p>
+
+<div class="buttons">
+    <button class="btn btn-back" onclick="goBack()">⬅ Capítulo 2</button>
+    <button class="btn btn-home" onclick="goHome()">🏠 Inicio</button>
+</div>
+
+</div>
+
+<script>
+function goBack() {
+    window.location.href = "chapter2.html";
+}
+
+function goHome() {
+    window.location.href = "index.html";
+}
+
+// partículas
+for (let i = 0; i < 70; i++) {
+    let p = document.createElement("div");
+    p.classList.add("particle");
+
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.animationDuration = (Math.random() * 10 + 5) + "s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
