@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Omyats & Zguats</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PGDSBMTL');</script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #000, #111);
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #00ccff;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #aaa;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .section-title {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0,255,200,0.3);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #aaa;
+        }
+
+        .characters {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- GTM -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGDSBMTL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header>
+    <h1>Omyats & Zguats</h1>
+    <p>Una historia de guerra, poder y verdad oculta</p>
+</header>
+
+<div class="container">
+
+    <div class="section-title">📖 Capítulos</div>
+
+    <div class="grid">
+
+        <div class="card" onclick="goToChapter('blog.html')">
+            <h3>Capítulo 1</h3>
+            <p>El primer golpe inicia el conflicto.</p>
+        </div>
+
+        <div class="card" onclick="goToChapter('chapter2.html')">
+            <h3>Capítulo 2</h3>
+            <p>La decisión que cambiará todo.</p>
+        </div>
+
+        <div class="card" onclick="goToChapter('chapter3.html')">
+            <h3>Capítulo 3</h3>
+            <p>Cautiverio y revelaciones.</p>
+        </div>
+
+    </div>
+
+    <div class="section-title characters">🧬 Personajes</div>
+
+    <div class="grid">
+
+        <div class="card" onclick="goToChapter('characters.html')">
+            <h3>Ver personajes</h3>
+            <p>Explora a los protagonistas de la historia.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function goToChapter(page) {
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
