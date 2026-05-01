@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personajes</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: radial-gradient(circle at center, #050814, #000);
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00ccff;
+            text-shadow: 0 0 15px #00ccff;
+            margin-bottom: 50px;
+        }
+
+        .character {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        img {
+            width: 350px;
+            border-radius: 15px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h2 {
+            color: #00ccff;
+            font-size: 36px;
+        }
+
+        .back-btn {
+            margin-top: 40px;
+            padding: 15px 30px;
+            border: none;
+            background: #00ccff;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Personajes</h1>
+
+<div class="character">
+    <img src="valast.jpeg" alt="ValAst">
+
+    <div class="info">
+        <h2>ValAst — El Elegido</h2>
+
+        <p><strong>Raza:</strong> Gris Adaptado</p>
+        <p><strong>Altura:</strong> 2.08 m</p>
+        <p><strong>Edad:</strong> Desconocida</p>
+        <p><strong>Rol:</strong> Mediador / Cambiador</p>
+
+        <p>
+            Cree en el bien incluso cuando el mundo no.
+            Cuestionó todo lo que conocía y terminó atrapado entre
+            dos verdades manipuladas.
+        </p>
+
+        <button class="back-btn" onclick="goHome()">Volver</button>
+    </div>
+</div>
+
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
