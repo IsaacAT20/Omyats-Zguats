@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personajes</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: radial-gradient(circle at center, #050814, #000);
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00ccff;
+            text-shadow: 0 0 15px #00ccff;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #00ccff;
+            margin-top: 60px;
+        }
+
+        /* CONTENEDOR DOBLE */
+        .character {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            margin-bottom: 40px;
+        }
+
+        /* TARJETA INDIVIDUAL */
+        .card {
+            flex: 1;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .valast h3 {
+            color: #00ccff;
+            text-shadow: 0 0 10px #00ccff;
+        }
+
+        .akir h3 {
+            color: #ff5500;
+            text-shadow: 0 0 10px #ff5500;
+        }
+
+        .info p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .list {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(255,255,255,0.03);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .list p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        /* BOTÓN MEJORADO */
+        .back-btn {
+            display: block;
+            margin: 60px auto 0;
+            padding: 15px 40px;
+            border: 1px solid #00e5ff;
+            background: transparent;
+            color: #00e5ff;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 8px #00e5ff;
+        }
+
+        .back-btn:hover {
+            background: #00e5ff;
+            color: black;
+            transform: scale(1.08);
+            box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            .character {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🧬 Personajes</h1>
+
+<!-- PERSONAJES PRINCIPALES -->
+<div class="character">
+
+    <!-- VALAST -->
+    <div class="card valast">
+        <img src="valast.jpeg" alt="ValAst">
+
+        <div class="info">
+            <h3>ValAst — El Elegido</h3>
+
+            <p><strong>Raza:</strong> Gris Adaptado</p>
+            <p><strong>Altura:</strong> 2.08 m</p>
+            <p><strong>Edad:</strong> Desconocida</p>
+            <p><strong>Rol:</strong> Mediador / Cambiador</p>
+
+            <p>
+                Cree en el bien incluso cuando el mundo no.
+                Cuestionó todo lo que conocía y terminó atrapado entre
+                dos verdades manipuladas.
+            </p>
+        </div>
+    </div>
+
+    <!-- AKIR -->
+    <div class="card akir">
+        <img src="akir.jpeg" alt="AkiR">
+
+        <div class="info">
+            <h3>AkiR — La Portadora del Juicio</h3>
+
+            <p><strong>Raza:</strong> Roja Influyente (variante Zguat ígnea)</p>
+            <p><strong>Altura:</strong> 1.96 m</p>
+            <p><strong>Edad:</strong> Desconocida</p>
+            <p><strong>Origen:</strong> Linaje de JaFran</p>
+            <p><strong>Rol:</strong> Ejecutora Ígnea / Portadora del Juicio</p>
+
+            <p>
+                <strong>Filosofía:</strong><br>
+                El fuego revela la verdad: purifica o consume.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- OMYATS -->
+<h2>🌪️ Los Omyats</h2>
+<div class="list">
+
+<p><strong>ValAst:</strong> Protagonista principal. Analítico y reflexivo, cuestiona la verdad detrás de la guerra.</p>
+
+<p><strong>GloSco:</strong> Hermano de ValAst. Directo, leal al sistema y experto en combate cuerpo a cuerpo.</p>
+
+<p><strong>AbiSaTi:</strong> Padre de ambos y líder Omyat. Estratega frío que conoce la verdad oculta.</p>
+
+<p><strong>JorGlot:</strong> Compañero de escuadrón. Rápido, preciso y altamente talentoso.</p>
+
+<p><strong>RadTor:</strong> Segundo al mando. Poderoso y desconfiado de los humanos.</p>
+
+</div>
+
+<!-- ZGUATS -->
+<h2>🔥 Los Zguats</h2>
+<div class="list">
+
+<p><strong>AkiR:</strong> Guerrera de élite con control perfecto del fuego. Fuerte, emocional y peligrosa.</p>
+
+<p><strong>JaFran:</strong> Padre de AkiR y alto mando. Guerrero imponente gravemente herido.</p>
+
+<p><strong>OcDaBa:</strong> Líder supremo de los Zguats. Figura dominante y estratégica.</p>
+
+<p><strong>Explorador Zguat:</strong> Guerrero que prueba las defensas Omyat sin intención de destruir.</p>
+
+</div>
+
+<!-- HUMANOS -->
+<h2>🧠 Los Humanos</h2>
+<div class="list">
+
+<p>
+<strong>Los Humanos:</strong> Manipuladores en las sombras. Poseen tecnología capaz de neutralizar
+tanto el viento como el fuego. Su objetivo es imponer un nuevo orden controlando ambos bandos.
+</p>
+
+</div>
+
+<button class="back-btn" onclick="goHome()">← Volver al inicio</button>
+
+<script>
+function goHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
