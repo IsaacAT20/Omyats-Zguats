@@ -78,10 +78,10 @@ body {
 <!-- HERO -->
 <section class="relative text-center py-20 overflow-hidden">
 
-    <!-- Imagen principal -->
+    <!-- Imagen fondo -->
     <img src="akir-valast.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
 
-    <!-- Oscuro -->
+    <!-- Oscurecer -->
     <div class="absolute inset-0 bg-black/70"></div>
 
     <!-- Contenido -->
@@ -95,9 +95,6 @@ body {
         <p class="text-gray-400 mb-6">
             Una historia de guerra, poder y verdad oculta
         </p>
-
-        <p class="text-sm text-gray-500">VISITAS</p>
-        <p id="visits" class="text-2xl glow-blue">Cargando...</p>
 
     </div>
 
@@ -148,7 +145,10 @@ body {
 
     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition"></div>
 
+    <!-- Glow azul -->
     <div class="absolute inset-y-0 left-0 w-1/2 bg-cyan-400/20 blur-2xl"></div>
+
+    <!-- Glow naranja -->
     <div class="absolute inset-y-0 right-0 w-1/2 bg-orange-500/20 blur-2xl"></div>
 
     <div class="absolute bottom-0 w-full p-6 flex justify-between items-center">
@@ -173,13 +173,6 @@ body {
 function go(page) {
     window.location.href = page;
 }
-
-/* CONTADOR */
-fetch("https://api.countapi.xyz/hit/omyatszguats/visitas")
-.then(res => res.json())
-.then(data => {
-    document.getElementById("visits").innerText = data.value;
-});
 </script>
 
 </body>
