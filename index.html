@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Omyats & Zguats</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+    background: #020617;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Glow */
+.glow-blue {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 30px #00e5ff;
+}
+
+.glow-orange {
+    color: #ff5500;
+    text-shadow: 0 0 10px #ff5500, 0 0 30px #ff5500;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0,229,255,0.3);
+}
+
+/* Botones */
+.btn-blue {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+}
+
+.btn-blue:hover {
+    background: #00e5ff;
+    color: black;
+}
+
+.btn-orange {
+    border: 1px solid #ff5500;
+    color: #ff5500;
+}
+
+.btn-orange:hover {
+    background: #ff5500;
+    color: black;
+}
+</style>
+</head>
+
+<body class="text-white">
+
+<!-- NAVBAR -->
+<header class="flex justify-between items-center px-10 py-4 border-b border-gray-800">
+    <h1 class="text-xl font-bold">
+        <span class="glow-blue">OMYATS</span> &
+        <span class="glow-orange">ZGUATS</span>
+    </h1>
+
+    <nav class="flex gap-8 text-sm">
+        <a href="#" class="text-cyan-400">INICIO</a>
+        <a href="#capitulos" class="hover:text-cyan-300">CAPÍTULOS</a>
+        <a href="personajes.html" class="hover:text-cyan-300">PERSONAJES</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative text-center py-20 overflow-hidden">
+
+    <!-- Imagen principal -->
+    <img src="akir-valast.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+    <!-- Oscuro -->
+    <div class="absolute inset-0 bg-black/70"></div>
+
+    <!-- Contenido -->
+    <div class="relative z-10">
+
+        <h2 class="text-6xl font-bold mb-4">
+            <span class="glow-blue">OMYATS</span> &
+            <span class="glow-orange">ZGUATS</span>
+        </h2>
+
+        <p class="text-gray-400 mb-6">
+            Una historia de guerra, poder y verdad oculta
+        </p>
+
+        <p class="text-sm text-gray-500">VISITAS</p>
+        <p id="visits" class="text-2xl glow-blue">Cargando...</p>
+
+    </div>
+
+</section>
+
+<!-- CAPITULOS -->
+<section id="capitulos" class="px-10 pb-20">
+
+<h3 class="text-xl mb-6">📖 CAPÍTULOS</h3>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+    <div class="card p-6 rounded-xl">
+        <h4 class="glow-blue text-lg mb-2">CAPÍTULO 1</h4>
+        <p class="text-gray-400 mb-4">El primer golpe inicia el conflicto.</p>
+        <button onclick="go('blog.html')" class="btn-blue px-4 py-2 rounded">
+            Leer →
+        </button>
+    </div>
+
+    <div class="card p-6 rounded-xl">
+        <h4 class="glow-blue text-lg mb-2">CAPÍTULO 2</h4>
+        <p class="text-gray-400 mb-4">La decisión que cambiará todo.</p>
+        <button onclick="go('chapter2.html')" class="btn-blue px-4 py-2 rounded">
+            Leer →
+        </button>
+    </div>
+
+    <div class="card p-6 rounded-xl">
+        <h4 class="glow-orange text-lg mb-2">CAPÍTULO 3</h4>
+        <p class="text-gray-400 mb-4">Cautiverio y revelaciones.</p>
+        <button onclick="go('chapter3.html')" class="btn-orange px-4 py-2 rounded">
+            Leer →
+        </button>
+    </div>
+
+</div>
+</section>
+
+<!-- PERSONAJES -->
+<section class="px-10 pb-20">
+
+<h3 class="text-xl mb-6">🧬 PERSONAJES</h3>
+
+<div class="relative rounded-xl overflow-hidden cursor-pointer group" onclick="go('personajes.html')">
+
+    <img src="akir-valast.jpg" class="w-full h-[300px] object-cover">
+
+    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition"></div>
+
+    <div class="absolute inset-y-0 left-0 w-1/2 bg-cyan-400/20 blur-2xl"></div>
+    <div class="absolute inset-y-0 right-0 w-1/2 bg-orange-500/20 blur-2xl"></div>
+
+    <div class="absolute bottom-0 w-full p-6 flex justify-between items-center">
+        <div>
+            <h4 class="text-xl glow-blue">VER PERSONAJES</h4>
+            <p class="text-gray-300">Explora a los protagonistas</p>
+        </div>
+
+        <span class="text-3xl">→</span>
+    </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center text-gray-500 text-sm pb-6">
+    © 2026 Omyats & Zguats
+</footer>
+
+<script>
+function go(page) {
+    window.location.href = page;
+}
+
+/* CONTADOR */
+fetch("https://api.countapi.xyz/hit/omyatszguats/visitas")
+.then(res => res.json())
+.then(data => {
+    document.getElementById("visits").innerText = data.value;
+});
+</script>
+
+</body>
+</html>
