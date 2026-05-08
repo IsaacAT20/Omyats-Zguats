@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Capítulo 5 — Lo Que Nunca Debió Existir</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08KST0QMX5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-08KST0QMX5');
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#020617;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Fondo animado */
+.bg-image{
+    position:fixed;
+    inset:0;
+    background:url('akir-valast.jpg') center/cover no-repeat;
+    opacity:0.08;
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at left, rgba(0,229,255,0.12), transparent 40%),
+    radial-gradient(circle at right, rgba(255,85,0,0.12), transparent 40%),
+    rgba(0,0,0,0.90);
+    z-index:-2;
+}
+
+/* Glow */
+.glow-blue{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff, 0 0 30px #00e5ff;
+}
+
+.glow-orange{
+    color:#ff5500;
+    text-shadow:0 0 10px #ff5500, 0 0 30px #ff5500;
+}
+
+.glow-red{
+    color:#ff1a1a;
+    text-shadow:0 0 15px #ff1a1a,0 0 35px #ff0000;
+}
+
+/* Partículas */
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:0.3;
+    animation:float linear infinite;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
+}
+
+/* Texto */
+.story-container{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.chapter-box{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:50px;
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+}
+
+.chapter-title{
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.chapter-subtitle{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:60px;
+    letter-spacing:2px;
+}
+
+.story-text{
+    font-size:20px;
+    line-height:2.1;
+    color:#d6d6d6;
+}
+
+.story-text p{
+    margin-bottom:32px;
+}
+
+/* Separadores */
+.divider{
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right, transparent, #444, transparent);
+    margin:60px 0;
+}
+
+/* Botones */
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.btn-blue{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    background:rgba(0,229,255,0.05);
+}
+
+.btn-blue:hover{
+    background:#00e5ff;
+    color:black;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(0,229,255,0.5);
+}
+
+.btn-orange{
+    border:1px solid #ff5500;
+    color:#ff5500;
+    background:rgba(255,85,0,0.05);
+}
+
+.btn-orange:hover{
+    background:#ff5500;
+    color:black;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,85,0,0.5);
+}
+
+@media(max-width:700px){
+
+.chapter-title{
+    font-size:38px;
+}
+
+.chapter-box{
+    padding:30px;
+}
+
+.story-text{
+    font-size:17px;
+    line-height:1.9;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-image"></div>
+<div class="overlay"></div>
+
+<!-- Partículas -->
+<script>
+for(let i=0;i<70;i++){
+    let p=document.createElement("div");
+    p.classList.add("particle");
+
+    p.style.left=Math.random()*100+"vw";
+    p.style.top=Math.random()*100+"vh";
+
+    p.style.animationDuration=(Math.random()*15+8)+"s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+<div class="story-container">
+
+<div class="chapter-box">
+
+<h1 class="chapter-title">
+    <span class="glow-blue">Capítulo 5</span>
+</h1>
+
+<p class="chapter-subtitle">
+    <span class="glow-orange">LO QUE NUNCA DEBIÓ EXISTIR</span>
+</p>
+
+<div class="story-text">
+
+<p>
+La lluvia caía lentamente sobre las ruinas cuando AkiR levantó la mirada hacia ValAst.
+</p>
+
+<p>
+—¿Nunca te preguntaste qué habría pasado si hubiéramos nacido en el mismo lado?
+</p>
+
+<p>
+ValAst tardó en responder.
+</p>
+
+<p>
+—Todo habría sido más fácil.
+</p>
+
+<p>
+AkiR soltó una pequeña risa.
+</p>
+
+<p>
+—No. Creo que habría sido peor.
+</p>
+
+<p>
+—¿Por qué?
+</p>
+
+<p>
+Ella dio un paso más cerca.
+</p>
+
+<p>
+—Porque igual habría terminado encontrándote.
+</p>
+
+<p>
+El corazón de ValAst se aceleró.
+</p>
+
+<p>
+Y eso lo asustó más que cualquier batalla.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Los entrenamientos dejaron de parecer entrenamientos.
+</p>
+
+<p>
+Ahora eran momentos robados.
+</p>
+
+<p>
+Momentos donde podían dejar de ser soldados.
+</p>
+
+<p>
+AkiR le enseñó a ValAst cómo sentir el calor antes de que el fuego apareciera realmente.
+</p>
+
+<p>
+ValAst le enseñó a escuchar el aire incluso en silencio absoluto.
+</p>
+
+<p>
+Horas.
+</p>
+
+<p>
+Días.
+</p>
+
+<p>
+Semanas.
+</p>
+
+<p>
+Y cada vez que se separaban… ambos querían volver.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Una noche, mientras descansaban sobre una estructura destruida lejos de todos, AkiR habló en voz baja.
+</p>
+
+<p>
+—Esto está mal.
+</p>
+
+<p>
+ValAst la miró.
+</p>
+
+<p>
+—Lo sé.
+</p>
+
+<p>
+—Nuestros pueblos se matarían entre sí si supieran esto.
+</p>
+
+<p>
+—Lo sé.
+</p>
+
+<p>
+AkiR bajó la mirada.
+</p>
+
+<p>
+—Entonces ¿por qué seguimos viniendo?
+</p>
+
+<p>
+ValAst se acercó lentamente.
+</p>
+
+<p>
+El viento movió el cabello de AkiR.
+</p>
+
+<p>
+Y entonces dijo la verdad.
+</p>
+
+<p class="glow-blue">
+—Porque cuando estoy contigo… todo deja de sentirse vacío.
+</p>
+
+<p>
+El silencio que siguió fue distinto.
+</p>
+
+<p>
+Más profundo.
+</p>
+
+<p>
+Más peligroso.
+</p>
+
+<p>
+AkiR levantó la mirada lentamente.
+</p>
+
+<p>
+Y antes de que cualquiera pudiera arrepentirse…
+</p>
+
+<p class="glow-orange">
+lo besó.
+</p>
+
+<p>
+El fuego apareció alrededor de ambos por reflejo.
+</p>
+
+<p>
+El viento también.
+</p>
+
+<p>
+Pero esta vez ninguno peleaba contra el otro.
+</p>
+
+<p>
+Por primera vez…
+</p>
+
+<p class="glow-blue">
+estaban en armonía.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Los humanos comenzaron a notarlo.
+</p>
+
+<p>
+Miradas.
+</p>
+
+<p>
+Ausencias.
+</p>
+
+<p>
+Cambios en sus patrones de entrenamiento.
+</p>
+
+<p>
+Y entendieron algo importante.
+</p>
+
+<p>
+ValAst y AkiR ya no podían ser manipulados por separado.
+</p>
+
+<p>
+Porque ahora existía un vínculo real entre ellos.
+</p>
+
+<p class="glow-orange">
+Eso cambió el plan.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Fue entonces cuando decidieron mostrarle la verdad a AkiR.
+</p>
+
+<p>
+Toda la verdad.
+</p>
+
+<div class="divider"></div>
+
+<p>
+La grabación estaba incompleta.
+</p>
+
+<p>
+Dañada.
+</p>
+
+<p>
+Antigua.
+</p>
+
+<p>
+Pero suficiente.
+</p>
+
+<p>
+AkiR observó la proyección sin moverse.
+</p>
+
+<p>
+Sin respirar.
+</p>
+
+<p>
+Sin pestañear.
+</p>
+
+<p>
+AbiSaTi apareció entre las interferencias.
+</p>
+
+<p>
+Más joven.
+</p>
+
+<p>
+Más frío.
+</p>
+
+<p>
+Frente a él…
+</p>
+
+<p>
+una mujer Zguat arrodillada.
+</p>
+
+<p class="glow-orange">
+Su madre.
+</p>
+
+<p>
+La voz de AbiSaTi resonó en toda la sala.
+</p>
+
+<p class="glow-red">
+—Los híbridos son una amenaza.
+</p>
+
+<p>
+Y entonces ocurrió.
+</p>
+
+<p>
+Fuego.
+</p>
+
+<p>
+Gritos.
+</p>
+
+<p>
+La ejecución.
+</p>
+
+<p>
+AkiR sintió que algo dentro de ella se rompía completamente.
+</p>
+
+<p>
+No había duda.
+</p>
+
+<p>
+No había manipulación.
+</p>
+
+<p>
+Ella lo había visto con sus propios ojos.
+</p>
+
+<p class="glow-red">
+AbiSaTi asesinó a su madre.
+</p>
+
+<div class="divider"></div>
+
+<p>
+AkiR regresó inmediatamente con los Zguats.
+</p>
+
+<p>
+JaFran supo que algo estaba mal apenas la vio.
+</p>
+
+<p>
+—¿Qué ocurrió?
+</p>
+
+<p>
+AkiR levantó la mirada lentamente.
+</p>
+
+<p>
+Y por primera vez…
+</p>
+
+<p>
+JaFran vio odio puro en los ojos de su hija.
+</p>
+
+<p class="glow-red">
+—AbiSaTi mató a mamá.
+</p>
+
+<p>
+Silencio.
+</p>
+
+<p>
+Absoluto.
+</p>
+
+<p>
+El fuego alrededor de la sala comenzó a elevarse lentamente.
+</p>
+
+<p>
+JaFran cerró los ojos.
+</p>
+
+<p>
+Como si en el fondo… siempre hubiera sospechado la verdad.
+</p>
+
+<p>
+Cuando volvió a abrirlos, ya había tomado una decisión.
+</p>
+
+<p class="glow-orange">
+—Entonces esto termina ahora.
+</p>
+
+<div class="divider"></div>
+
+<p>
+La movilización comenzó esa misma noche.
+</p>
+
+<p>
+Guerreros Zguat avanzaron hacia territorio Omyat mientras el calor cubría el horizonte.
+</p>
+
+<p>
+ValAst sintió algo extraño en el aire antes incluso de verlos.
+</p>
+
+<p>
+Cuando llegó a las murallas exteriores…
+</p>
+
+<p>
+la vio.
+</p>
+
+<p class="glow-orange">
+AkiR estaba al frente del ejército Zguat.
+</p>
+
+<p>
+Y sus ojos eran distintos.
+</p>
+
+<p>
+Vacíos.
+</p>
+
+<p>
+Llenos de rabia.
+</p>
+
+<div class="divider"></div>
+
+<p>
+El caos comenzó al instante.
+</p>
+
+<p>
+Omyats descendiendo desde las estructuras superiores.
+</p>
+
+<p>
+Viento chocando contra fuego.
+</p>
+
+<p>
+Explosiones.
+</p>
+
+<p>
+Gritos.
+</p>
+
+<p>
+Metal retorciéndose.
+</p>
+
+<p>
+ValAst intentó llegar hasta AkiR.
+</p>
+
+<p>
+Pero varios guerreros Zguat lo interceptaron.
+</p>
+
+<p>
+Lo sujetaron.
+</p>
+
+<p>
+Lo inmovilizaron.
+</p>
+
+<p class="glow-blue">
+—¡SUÉLTENME!
+</p>
+
+<div class="divider"></div>
+
+<p>
+AbiSaTi descendió lentamente hacia el centro del campo destruido.
+</p>
+
+<p>
+—Así que eres su hija.
+</p>
+
+<p>
+El fuego alrededor de AkiR comenzó a elevarse.
+</p>
+
+<p>
+—Dime que no es verdad.
+</p>
+
+<p>
+AbiSaTi no respondió de inmediato.
+</p>
+
+<p>
+Luego sonrió apenas.
+</p>
+
+<p>
+Y eso fue peor.
+</p>
+
+<p class="glow-red">
+—Tu madre debió morir hace años.
+</p>
+
+<p>
+ValAst sintió que el cuerpo se le congelaba.
+</p>
+
+<p class="glow-blue">
+—¡NO!
+</p>
+
+<p>
+AkiR comenzó a temblar.
+</p>
+
+<p>
+El fuego alrededor de ella ya no parecía normal.
+</p>
+
+<p class="glow-red">
+—Te mataré…
+</p>
+
+<p>
+AbiSaTi levantó su arma lentamente.
+</p>
+
+<p class="glow-red">
+—Te mataré como hice con la escoria de tu madre.
+</p>
+
+<p>
+Y entonces…
+</p>
+
+<p class="glow-red">
+algo dentro de AkiR explotó.
+</p>
+
+<div class="divider"></div>
+
+<p class="glow-red">
+El fuego negro apareció por primera vez.
+</p>
+
+<p>
+No eran llamas normales.
+</p>
+
+<p>
+Consumían la luz.
+</p>
+
+<p>
+Consumían el aire.
+</p>
+
+<p>
+Consumían todo.
+</p>
+
+<p>
+AkiR desapareció y reapareció frente a AbiSaTi en un instante.
+</p>
+
+<p>
+El primer golpe rompió parte de su mandíbula.
+</p>
+
+<p>
+Sangre.
+</p>
+
+<p>
+El segundo destruyó varias costillas.
+</p>
+
+<p>
+AbiSaTi intentó reaccionar.
+</p>
+
+<p>
+No pudo.
+</p>
+
+<p>
+AkiR lo golpeó otra vez.
+</p>
+
+<p>
+Y otra.
+</p>
+
+<p>
+Y otra.
+</p>
+
+<p>
+El fuego negro comenzaba a consumir su cuerpo mientras ella lo arrastraba por el suelo frente a todos.
+</p>
+
+<p>
+ValAst dejó de luchar.
+</p>
+
+<p>
+Miraba sin respirar.
+</p>
+
+<p>
+Sin entender.
+</p>
+
+<p>
+Finalmente lo levantó del cuello.
+</p>
+
+<p>
+El fuego negro atravesó todo su pecho.
+</p>
+
+<p>
+Y frente a todos…
+</p>
+
+<p class="glow-red">
+AkiR metió la mano dentro de su cuerpo.
+</p>
+
+<p>
+Hasta alcanzar su corazón.
+</p>
+
+<p>
+AbiSaTi abrió los ojos por última vez.
+</p>
+
+<p>
+Y ella lo quemó desde dentro.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Silencio.
+</p>
+
+<p>
+Total.
+</p>
+
+<p>
+AbiSaTi cayó al suelo convertido en cenizas.
+</p>
+
+<p>
+ValAst permanecía inmóvil.
+</p>
+
+<p>
+Con la cabeza agachada.
+</p>
+
+<p>
+Los guerreros que lo sujetaban comenzaron a mirarse entre ellos.
+</p>
+
+<p>
+Algo estaba mal.
+</p>
+
+<p class="glow-blue">
+Muy mal.
+</p>
+
+<p>
+Sus músculos comenzaron a tensarse solos.
+</p>
+
+<p>
+El aire cambió.
+</p>
+
+<p>
+Literalmente.
+</p>
+
+<p>
+Más pesado.
+</p>
+
+<p>
+Más agresivo.
+</p>
+
+<p>
+Más vivo.
+</p>
+
+<p>
+—¿Qué… está pasando…?
+</p>
+
+<p>
+El suelo comenzó a temblar.
+</p>
+
+<p>
+Entonces los cuatro puntos de los ojos de ValAst comenzaron a brillar.
+</p>
+
+<p class="glow-red">
+Rojo.
+</p>
+
+<p class="glow-orange">
+Dorado.
+</p>
+
+<p class="glow-blue">
+Plateado.
+</p>
+
+<p class="glow-red">
+Negro.
+</p>
+
+<p>
+Los guerreros que lo sujetaban salieron disparados violentamente.
+</p>
+
+<p>
+El viento explotó en todas direcciones.
+</p>
+
+<p>
+Pero ya no obedecía solo a ValAst.
+</p>
+
+<p>
+Parecía odiar a todos.
+</p>
+
+<p>
+Omyats y Zguats comenzaron a ser lanzados por igual.
+</p>
+
+<p>
+Nadie podía mantenerse de pie.
+</p>
+
+<p>
+El aire comprimía el cuerpo.
+</p>
+
+<p>
+Rompía estructuras.
+</p>
+
+<p>
+Asfixiaba.
+</p>
+
+<p>
+Incluso AkiR retrocedió lentamente.
+</p>
+
+<p>
+Por primera vez…
+</p>
+
+<p class="glow-red">
+sintiendo miedo de ValAst.
+</p>
+
+<p>
+Y entonces él levantó la cabeza.
+</p>
+
+<p class="glow-red">
+Pero ya no quedaba nada humano en sus ojos.
+</p>
+
+</div>
+
+<!-- BOTONES -->
+<div class="nav-buttons">
+
+<button class="btn btn-blue" onclick="go('chapter4.html')">
+⬅ Capítulo 4
+</button>
+
+<button class="btn btn-orange" onclick="go('index.html')">
+ Home
+</button>
+
+<button class="btn btn-blue" onclick="go('chapter6.html')">
+Capítulo 6 ➜
+</button>
+
+</div>
+
+</div>
+</div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>

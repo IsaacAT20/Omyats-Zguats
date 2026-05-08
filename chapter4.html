@@ -1,0 +1,683 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Capítulo 4 — Acuerdos Inesperados</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:
+    radial-gradient(circle at top left, rgba(0,229,255,0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,85,0,0.12), transparent 30%),
+    #020617;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Glow textos */
+.glow-blue{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff, 0 0 25px #00e5ff;
+}
+
+.glow-orange{
+    color:#ff5500;
+    text-shadow:0 0 10px #ff5500, 0 0 25px #ff5500;
+}
+
+/* Partículas */
+.particle{
+    position:fixed;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:0.3;
+    animation:float linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
+}
+
+/* Caja principal */
+.story-box{
+    max-width:950px;
+    margin:auto;
+    padding:50px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:24px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 40px rgba(0,0,0,0.5);
+    position:relative;
+    z-index:2;
+}
+
+/* Texto */
+.story-box p{
+    color:#d1d5db;
+    line-height:2;
+    margin-bottom:24px;
+    font-size:18px;
+}
+
+/* Separadores */
+.separator{
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    margin:45px 0;
+}
+
+/* Quotes */
+.quote{
+    border-left:3px solid #00e5ff;
+    padding-left:20px;
+    font-style:italic;
+    color:#e5e7eb;
+}
+
+.quote-orange{
+    border-left:3px solid #ff5500;
+}
+
+/* Botones */
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:60px;
+    flex-wrap:wrap;
+}
+
+.nav-btn{
+    padding:14px 28px;
+    border-radius:14px;
+    background:transparent;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    text-shadow:0 0 8px #00e5ff;
+}
+
+.nav-btn:hover{
+    background:#00e5ff;
+    color:black;
+    transform:translateY(-4px);
+    box-shadow:0 0 20px #00e5ff;
+}
+
+.orange{
+    border-color:#ff5500;
+    color:#ff5500;
+    text-shadow:0 0 8px #ff5500;
+}
+
+.orange:hover{
+    background:#ff5500;
+    box-shadow:0 0 20px #ff5500;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .story-box{
+        padding:30px;
+    }
+
+    h1{
+        font-size:42px !important;
+    }
+
+    .story-box p{
+        font-size:16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PARTICULAS -->
+<script>
+for(let i=0;i<70;i++){
+
+    let p=document.createElement("div");
+    p.classList.add("particle");
+
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(Math.random()*12+6)+"s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+<!-- HERO -->
+<section class="relative text-center py-24 overflow-hidden">
+
+    <div class="absolute left-[-100px] top-[20%] w-[300px] h-[300px] bg-cyan-400/20 blur-3xl rounded-full"></div>
+    <div class="absolute right-[-100px] top-[20%] w-[300px] h-[300px] bg-orange-500/20 blur-3xl rounded-full"></div>
+
+    <div class="relative z-10">
+
+        <p class="tracking-[6px] text-gray-500 mb-4">
+            OMYATS & ZGUATS
+        </p>
+
+        <h1 class="text-6xl font-bold mb-6">
+            <span class="glow-blue">Capítulo 4</span>
+            <br>
+            <span class="glow-orange">Acuerdos Inesperados</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg">
+            A veces la guerra no termina...
+            <br>
+            solo cambia de forma.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HISTORIA -->
+<section class="px-6 pb-24">
+
+<div class="story-box">
+
+<p>
+La tensión entre Omyats y Zguats no desapareció después de la captura.
+</p>
+
+<p>
+Pero algo sí cambió.
+</p>
+
+<p class="glow-blue">
+Las preguntas.
+</p>
+
+<p>
+Cada conversación con los humanos dejaba nuevas dudas.
+Nuevas grietas en todo lo que ValAst y AkiR habían creído desde niños.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Finalmente, los humanos hicieron una propuesta.
+</p>
+
+<p>
+Separarlos.
+</p>
+
+<p>
+No como prisioneros.
+</p>
+
+<p class="glow-orange">
+Como aliados temporales.
+</p>
+
+<div class="quote">
+—Podrán revisar parte del material —explicó uno de los líderes humanos—.
+Pero cada uno volverá con su gente.
+Necesitamos estabilidad entre ambos lados antes de mostrar el resto.
+</div>
+
+<p>
+Ni ValAst ni AkiR confiaban completamente en ellos.
+</p>
+
+<p>
+Pero aceptaron.
+</p>
+
+<p>
+Porque necesitaban respuestas.
+</p>
+
+<div class="separator"></div>
+
+<p>
+La despedida fue extraña.
+</p>
+
+<p>
+Incómoda.
+</p>
+
+<p>
+AkiR permanecía de pie frente al transporte humano mientras observaba a ValAst en silencio.
+</p>
+
+<div class="quote quote-orange">
+—Supongo que esto significa que volvemos a ser enemigos.
+</div>
+
+<p>
+ValAst negó lentamente.
+</p>
+
+<div class="quote">
+—Ya no sé qué somos.
+</div>
+
+<p>
+Aquellas palabras hicieron que algo cambiara en la expresión de AkiR.
+</p>
+
+<p>
+Algo pequeño.
+Pero real.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Entonces los humanos separaron ambos grupos.
+</p>
+
+<p>
+ValAst regresó con los Omyats.
+</p>
+
+<p>
+AkiR volvió con los Zguats.
+</p>
+
+<p class="glow-blue">
+Y aun así…
+ninguno logró dejar de pensar en el otro.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Las semanas siguientes fueron distintas.
+</p>
+
+<p>
+Los humanos comenzaron a organizar entrenamientos conjuntos lejos de las ciudades principales.
+</p>
+
+<p>
+Zonas neutrales.
+Lugares abandonados por la guerra.
+</p>
+
+<p>
+La excusa era simple:
+</p>
+
+<p>
+Preparación.
+</p>
+
+<p>
+Cooperación táctica.
+</p>
+
+<p>
+Pero poco a poco…
+dejó de sentirse solo como eso.
+</p>
+
+<div class="separator"></div>
+
+<p>
+ValAst volvió a ver a AkiR durante el primer entrenamiento conjunto.
+</p>
+
+<p>
+Ella descendió entre llamas controladas mientras varios guerreros Zguat observaban desde atrás.
+</p>
+
+<p>
+ValAst sintió algo extraño en el pecho apenas la vio.
+</p>
+
+<p>
+Y lo odiaba.
+</p>
+
+<p>
+Porque nunca había sentido algo así.
+</p>
+
+<p>
+AkiR lo miró apenas unos segundos.
+</p>
+
+<p>
+Pero sonrió.
+</p>
+
+<p class="glow-orange">
+Muy poco.
+Lo suficiente.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Los entrenamientos comenzaron siendo tensos.
+</p>
+
+<p>
+Fuego contra viento.
+</p>
+
+<p>
+Ataques medidos.
+</p>
+
+<p>
+Distancia constante.
+</p>
+
+<p>
+Pero ambos aprendían rápido.
+</p>
+
+<p class="glow-blue">
+Demasiado rápido.
+</p>
+
+<p>
+ValAst comenzó a entender cómo reaccionaban las llamas al movimiento del aire.
+</p>
+
+<p>
+AkiR descubrió cómo aprovechar las corrientes que él creaba.
+</p>
+
+<p>
+Y poco a poco…
+comenzaron a sincronizarse.
+</p>
+
+<p>
+Era algo natural.
+</p>
+
+<p>
+Instintivo.
+</p>
+
+<p class="glow-orange">
+Como si sus poderes hubieran sido diseñados para complementarse.
+</p>
+
+<div class="separator"></div>
+
+<div class="quote quote-orange">
+—Otra vez.
+</div>
+
+<p>
+AkiR encendió fuego en sus manos.
+</p>
+
+<p>
+ValAst sonrió apenas.
+</p>
+
+<div class="quote">
+—Te estás acostumbrando a perder.
+</div>
+
+<p>
+Ella lanzó una llamarada directa hacia él.
+</p>
+
+<p>
+El viento giró alrededor de ValAst y desvió las llamas exactamente como esperaba.
+</p>
+
+<p>
+Pero esta vez…
+AkiR ya había previsto eso.
+</p>
+
+<p>
+El fuego regresó desde otro ángulo.
+</p>
+
+<p>
+ValAst apenas logró reaccionar antes de sentir el calor rozar su rostro.
+</p>
+
+<p>
+AkiR soltó una pequeña risa.
+</p>
+
+<div class="quote quote-orange">
+—Más lento.
+</div>
+
+<p>
+ValAst la observó unos segundos.
+</p>
+
+<p>
+Luego sonrió también.
+</p>
+
+<p class="glow-blue">
+Y por primera vez en mucho tiempo…
+se sintió en paz.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Los encuentros comenzaron a hacerse más frecuentes.
+</p>
+
+<p>
+Demasiado frecuentes.
+</p>
+
+<p>
+Al principio solo se veían durante entrenamientos oficiales.
+</p>
+
+<p>
+Luego comenzaron a quedarse después de las sesiones.
+</p>
+
+<p>
+Después comenzaron a buscar excusas.
+</p>
+
+<p class="glow-orange">
+Y finalmente…
+ya ni siquiera necesitaban excusas.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Una noche, ValAst abandonó las instalaciones Omyat sin avisar.
+</p>
+
+<p>
+El viento lo guió hasta una zona montañosa abandonada donde pequeñas corrientes cálidas iluminaban la oscuridad.
+</p>
+
+<p>
+AkiR ya estaba ahí.
+</p>
+
+<p class="glow-orange">
+Esperándolo.
+</p>
+
+<div class="quote quote-orange">
+—Llegas tarde.
+</div>
+
+<div class="quote">
+—Quería asegurarme de que no me siguieran.
+</div>
+
+<p>
+AkiR sonrió apenas.
+</p>
+
+<div class="quote quote-orange">
+—¿Y si yo sí quisiera seguirte?
+</div>
+
+<p>
+ValAst se quedó callado unos segundos.
+</p>
+
+<p>
+Demasiados.
+</p>
+
+<div class="quote">
+—Entonces sería un problema.
+</div>
+
+<p>
+Ella lo observó directamente.
+</p>
+
+<div class="quote quote-orange">
+—¿Y si no me importa?
+</div>
+
+<p>
+El viento se movió lentamente alrededor de ambos.
+</p>
+
+<p>
+Ninguno apartó la mirada.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Desde entonces comenzaron a entrenar solos.
+</p>
+
+<p>
+A escondidas.
+</p>
+
+<p>
+Lejos de humanos.
+</p>
+
+<p>
+Lejos de Omyats.
+</p>
+
+<p>
+Lejos de Zguats.
+</p>
+
+<p class="glow-blue">
+Solo ellos.
+</p>
+
+<div class="separator"></div>
+
+<p>
+Y cada encuentro hacía más difícil ignorar lo evidente.
+</p>
+
+<p>
+ValAst empezó a esperar verla.
+</p>
+
+<p>
+AkiR comenzó a confiar en él de formas que jamás imaginó posibles.
+</p>
+
+<p>
+Hablaron de la guerra.
+</p>
+
+<p>
+De sus hermanos.
+</p>
+
+<p>
+De JaFran.
+</p>
+
+<p>
+De AbiSaTi.
+</p>
+
+<p>
+De lo cansados que estaban.
+</p>
+
+<p>
+Y poco a poco…
+dejaron de sentirse como dos enemigos intentando entenderse.
+</p>
+
+<p class="text-2xl text-center mt-12 glow-orange">
+Comenzaron a sentirse como algo más.
+</p>
+
+<!-- BOTONES -->
+<div class="nav-buttons">
+
+    <button class="nav-btn"
+    onclick="go('chapter3.html')">
+    ← Capítulo 3
+    </button>
+
+    <button class="nav-btn"
+    onclick="go('index.html')">
+    Home
+    </button>
+
+    <button class="nav-btn orange"
+    onclick="go('chapter5.html')">
+    Capítulo 5 →
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function go(page){
+    window.location.href=page;
+}
+
+</script>
+
+</body>
+</html>
+```

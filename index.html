@@ -7,144 +7,289 @@
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-08KST0QMX5"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-08KST0QMX5');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-08KST0QMX5');
 </script>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body {
-    background: #020617;
-    font-family: 'Segoe UI', sans-serif;
+
+body{
+    background:#020617;
+    font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
+    position:relative;
+    color:white;
 }
 
-.glow-blue {
-    color: #00e5ff;
-    text-shadow: 0 0 10px #00e5ff, 0 0 30px #00e5ff;
+/* EFECTO VERDE NATURALEZA */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%, rgba(0,255,120,0.08), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(0,180,90,0.07), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(50,255,150,0.06), transparent 35%),
+    radial-gradient(circle at center, rgba(0,0,0,0.25), transparent 70%);
+
+    pointer-events:none;
+    z-index:-2;
 }
 
-.glow-orange {
-    color: #ff5500;
-    text-shadow: 0 0 10px #ff5500, 0 0 30px #ff5500;
+/* PARTÍCULAS */
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    opacity:0.4;
+    animation:float linear infinite;
+    z-index:-1;
+
+    /* ESTO ARREGLA LOS CLICKS */
+    pointer-events:none;
 }
 
-.card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px rgba(0,229,255,0.3);
+/* GLOW */
+.glow-blue{
+    color:#00e5ff;
+    text-shadow:0 0 10px #00e5ff,0 0 30px #00e5ff;
 }
 
-.btn-blue {
-    border: 1px solid #00e5ff;
-    color: #00e5ff;
+.glow-orange{
+    color:#ff5500;
+    text-shadow:0 0 10px #ff5500,0 0 30px #ff5500;
 }
 
-.btn-blue:hover {
-    background: #00e5ff;
-    color: black;
+.glow-red{
+    color:#ff1744;
+    text-shadow:0 0 12px #ff1744,0 0 40px #ff0033;
 }
 
-.btn-orange {
-    border: 1px solid #ff5500;
-    color: #ff5500;
+/* CARDS */
+.card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    transition:0.35s;
+    position:relative;
+    overflow:hidden;
 }
 
-.btn-orange:hover {
-    background: #ff5500;
-    color: black;
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:0.4s;
+
+    /* FIX */
+    pointer-events:none;
+    z-index:0;
 }
 
-/* 💬 COMENTARIOS */
-.comment-panel {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
+.card > *{
+    position:relative;
+    z-index:2;
+}{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition:0.4s;
 }
 
-.comment-input {
-    background: rgba(0,0,0,0.4);
-    border: 1px solid #333;
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    outline: none;
+.card:hover{
+    transform:translateY(-8px);
 }
 
-.comment-input:focus {
-    border-color: #00e5ff;
-    box-shadow: 0 0 10px rgba(0,229,255,0.3);
+.card:hover::before{
+    opacity:1;
 }
 
-.comment-btn {
-    border: 1px solid #00e5ff;
-    color: #00e5ff;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: 0.3s;
+/* CAPÍTULOS AZULES */
+.card-blue:hover{
+    box-shadow:0 0 30px rgba(0,229,255,0.35);
 }
 
-.comment-btn:hover {
-    background: #00e5ff;
-    color: black;
+.card-blue::before{
+    background:
+    radial-gradient(circle at top left,
+    rgba(0,229,255,0.12),
+    transparent 60%);
 }
 
-.comment-box {
-    background: rgba(0,0,0,0.3);
-    border: 1px solid #222;
-    padding: 12px;
-    border-radius: 10px;
-    transition: 0.2s;
+/* CAPÍTULOS NARANJAS */
+.card-orange:hover{
+    box-shadow:0 0 30px rgba(255,85,0,0.35);
 }
 
-.comment-box:hover {
-    border-color: #00e5ff;
-    transform: translateY(-2px);
+.card-orange::before{
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,85,0,0.12),
+    transparent 60%);
 }
 
-.comment-name {
-    color: #00e5ff;
-    font-weight: bold;
+/* CAPÍTULO 6 */
+.card-red{
+    border:1px solid rgba(255,0,80,0.3);
+    background:rgba(255,0,60,0.04);
 }
 
-.comment-text {
-    color: #ccc;
+.card-red:hover{
+    box-shadow:0 0 40px rgba(255,0,80,0.45);
 }
+
+.card-red::before{
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,0,80,0.18),
+    transparent 60%);
+}
+
+/* BOTONES */
+.btn-blue{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    transition:0.3s;
+}
+
+.btn-blue:hover{
+    background:#00e5ff;
+    color:black;
+    box-shadow:0 0 20px rgba(0,229,255,0.5);
+}
+
+.btn-orange{
+    border:1px solid #ff5500;
+    color:#ff5500;
+    transition:0.3s;
+}
+
+.btn-orange:hover{
+    background:#ff5500;
+    color:black;
+    box-shadow:0 0 20px rgba(255,85,0,0.5);
+}
+
+.btn-red{
+    border:1px solid #ff1744;
+    color:#ff1744;
+    transition:0.3s;
+}
+
+.btn-red:hover{
+    background:#ff1744;
+    color:white;
+    box-shadow:0 0 25px rgba(255,23,68,0.6);
+}
+
+/* COMENTARIOS */
+.comment-panel{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:12px;
+    padding:20px;
+}
+
+.comment-input{
+    background:rgba(0,0,0,0.4);
+    border:1px solid #333;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    outline:none;
+}
+
+.comment-input:focus{
+    border-color:#00e5ff;
+    box-shadow:0 0 10px rgba(0,229,255,0.3);
+}
+
+.comment-btn{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.comment-btn:hover{
+    background:#00e5ff;
+    color:black;
+}
+
+.comment-box{
+    background:rgba(0,0,0,0.3);
+    border:1px solid #222;
+    padding:12px;
+    border-radius:10px;
+    transition:0.2s;
+}
+
+.comment-box:hover{
+    border-color:#00e5ff;
+    transform:translateY(-2px);
+}
+
+.comment-name{
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+.comment-text{
+    color:#ccc;
+}
+
 </style>
 </head>
 
-<body class="text-white">
+<body>
 
+<!-- NAVBAR -->
 <header class="flex justify-between items-center px-10 py-4 border-b border-gray-800">
+
     <h1 class="text-xl font-bold">
         <span class="glow-blue">OMYATS</span> &
         <span class="glow-orange">ZGUATS</span>
     </h1>
 
     <nav class="flex gap-8 text-sm">
-        <a href="#" class="text-cyan-400">INICIO</a>
+        <a href="index.html" class="text-cyan-400">INICIO</a>
         <a href="#capitulos" class="hover:text-cyan-300">CAPÍTULOS</a>
         <a href="personajes.html" class="hover:text-cyan-300">PERSONAJES</a>
     </nav>
+
 </header>
 
 <!-- HERO -->
 <section class="relative text-center py-20 overflow-hidden">
 
-    <img src="akir-valast.jpg" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <img src="akir-valast.jpg"
+         class="absolute inset-0 w-full h-full object-cover opacity-30">
+
     <div class="absolute inset-0 bg-black/70"></div>
 
     <div class="relative z-10">
+
         <h2 class="text-6xl font-bold mb-4">
             <span class="glow-blue">OMYATS</span> &
             <span class="glow-orange">ZGUATS</span>
@@ -153,31 +298,124 @@ body {
         <p class="text-gray-400 mb-6">
             Una historia de guerra, poder y verdad oculta
         </p>
+
     </div>
+
 </section>
 
 <!-- CAPITULOS -->
 <section id="capitulos" class="px-10 pb-20">
-<h3 class="text-xl mb-6">📖 CAPÍTULOS</h3>
+
+<h3 class="text-xl mb-6">CAPÍTULOS</h3>
 
 <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="card p-6 rounded-xl">
-        <h4 class="glow-blue text-lg mb-2">CAPÍTULO 1</h4>
-        <p class="text-gray-400 mb-4">El primer golpe inicia el conflicto.</p>
-        <button onclick="go('blog.html')" class="btn-blue px-4 py-2 rounded">Leer →</button>
+    <!-- CAP 1 -->
+    <div class="card card-blue p-6 rounded-xl">
+
+        <h4 class="glow-blue text-lg mb-2">
+            CAPÍTULO 1
+        </h4>
+
+        <p class="text-gray-400 mb-4">
+            El primer golpe inicia el conflicto.
+        </p>
+
+        <a href="blog.html"
+           class="btn-blue px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
     </div>
 
-    <div class="card p-6 rounded-xl">
-        <h4 class="glow-blue text-lg mb-2">CAPÍTULO 2</h4>
-        <p class="text-gray-400 mb-4">La decisión que cambiará todo.</p>
-        <button onclick="go('chapter2.html')" class="btn-blue px-4 py-2 rounded">Leer →</button>
+    <!-- CAP 2 -->
+    <div class="card card-orange p-6 rounded-xl">
+
+        <h4 class="glow-orange text-lg mb-2">
+            CAPÍTULO 2
+        </h4>
+
+        <p class="text-gray-400 mb-4">
+            La decisión que cambiará todo.
+        </p>
+
+        <a href="chapter2.html"
+           class="btn-orange px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
     </div>
 
-    <div class="card p-6 rounded-xl">
-        <h4 class="glow-orange text-lg mb-2">CAPÍTULO 3</h4>
-        <p class="text-gray-400 mb-4">Cautiverio y revelaciones.</p>
-        <button onclick="go('chapter3.html')" class="btn-orange px-4 py-2 rounded">Leer →</button>
+    <!-- CAP 3 -->
+    <div class="card card-orange p-6 rounded-xl">
+
+        <h4 class="glow-orange text-lg mb-2">
+            CAPÍTULO 3
+        </h4>
+
+        <p class="text-gray-400 mb-4">
+            Cautiverio y revelaciones.
+        </p>
+
+        <a href="chapter3.html"
+           class="btn-orange px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
+    </div>
+
+    <!-- CAP 4 -->
+    <div class="card card-blue p-6 rounded-xl">
+
+        <h4 class="glow-blue text-lg mb-2">
+            CAPÍTULO 4
+        </h4>
+
+        <p class="text-gray-400 mb-4">
+            Acuerdos inesperados cambian el rumbo de la guerra.
+        </p>
+
+        <a href="chapter4.html"
+           class="btn-blue px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
+    </div>
+
+    <!-- CAP 5 -->
+    <div class="card card-blue p-6 rounded-xl">
+
+        <h4 class="glow-blue text-lg mb-2">
+            CAPÍTULO 5
+        </h4>
+
+        <p class="text-gray-400 mb-4">
+            Lo que nunca debió existir cambia el destino de ambos mundos.
+        </p>
+
+        <a href="chapter5.html"
+           class="btn-blue px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
+    </div>
+
+    <!-- CAP 6 -->
+    <div class="card card-red p-6 rounded-xl">
+
+        <h4 class="glow-red text-lg mb-2">
+            CAPÍTULO 6 — PRIME
+        </h4>
+
+        <p class="text-gray-300 mb-4">
+            PRIME despierta y el mundo entero comienza a colapsar.
+        </p>
+
+        <a href="chapter6.html"
+           class="btn-red px-4 py-2 rounded inline-block">
+            Leer →
+        </a>
+
     </div>
 
 </div>
@@ -185,115 +423,187 @@ body {
 
 <!-- PERSONAJES -->
 <section class="px-10 pb-20">
-<h3 class="text-xl mb-6">🧬 PERSONAJES</h3>
 
-<div class="relative rounded-xl overflow-hidden cursor-pointer group" onclick="go('personajes.html')">
+<h3 class="text-xl mb-6">PERSONAJES</h3>
 
-    <img src="akir-valast.jpg" class="w-full h-[300px] object-cover">
+<a href="personajes.html"
+   class="relative rounded-xl overflow-hidden cursor-pointer group block">
+
+    <img src="akir-valast.jpg"
+         class="w-full h-[300px] object-cover">
+
     <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition"></div>
 
     <div class="absolute bottom-0 w-full p-6 flex justify-between items-center">
+
         <div>
-            <h4 class="text-xl glow-blue">VER PERSONAJES</h4>
-            <p class="text-gray-300">Explora a los protagonistas</p>
+            <h4 class="text-xl glow-blue">
+                VER PERSONAJES
+            </h4>
+
+            <p class="text-gray-300">
+                Explora a los protagonistas
+            </p>
         </div>
+
         <span class="text-3xl">→</span>
+
     </div>
 
-</div>
+</a>
+
 </section>
 
-<!-- 💬 COMENTARIOS -->
+<!-- COMENTARIOS -->
 <section class="px-10 pb-20">
+
 <h3 class="text-xl mb-4">💬 Comentarios</h3>
 
 <div class="comment-panel">
 
     <div class="grid gap-3 mb-4">
-        <input id="name" placeholder="Tu nombre (opcional)" class="comment-input">
-        <textarea id="text" placeholder="Escribe un comentario..." class="comment-input h-24"></textarea>
 
-        <button onclick="sendComment()" class="comment-btn w-fit">
+        <input id="name"
+               placeholder="Tu nombre (opcional)"
+               class="comment-input">
+
+        <textarea id="text"
+                  placeholder="Escribe un comentario..."
+                  class="comment-input h-24"></textarea>
+
+        <button onclick="sendComment()"
+                class="comment-btn w-fit">
             Enviar comentario →
         </button>
+
     </div>
 
     <div class="border-t border-gray-700 my-4"></div>
 
-    <div id="comments" class="space-y-3 max-h-[350px] overflow-y-auto pr-2"></div>
+    <div id="comments"
+         class="space-y-3 max-h-[350px] overflow-y-auto pr-2"></div>
 
 </div>
+
 </section>
 
+<!-- FOOTER -->
 <footer class="text-center text-gray-500 text-sm pb-6">
     © 2026 Omyats & Zguats
 </footer>
 
-<script>
-function go(page) {
-    window.location.href = page;
-}
-</script>
-
-<!-- 🔥 FIREBASE -->
+<!-- FIREBASE -->
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  onSnapshot,
-  query,
-  orderBy
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
-// 🔧 TU CONFIG
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+onSnapshot,
+query,
+orderBy
+}
+from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+
+apiKey: "TU_API_KEY",
+authDomain: "TU_AUTH_DOMAIN",
+projectId: "TU_PROJECT_ID",
+storageBucket: "TU_STORAGE_BUCKET",
+messagingSenderId: "TU_SENDER_ID",
+appId: "TU_APP_ID"
+
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// 📤 enviar comentario
-window.sendComment = async function () {
-  const name = document.getElementById("name").value;
-  const text = document.getElementById("text").value;
+window.sendComment = async function(){
 
-  if (!text) return;
+const name=document.getElementById("name").value;
+const text=document.getElementById("text").value;
 
-  await addDoc(collection(db, "comments"), {
-    name: name || "Anónimo",
-    text: text,
-    date: new Date()
-  });
+if(!text) return;
 
-  document.getElementById("text").value = "";
+await addDoc(collection(db,"comments"),{
+
+name:name || "Anónimo",
+text:text,
+date:new Date()
+
+});
+
+document.getElementById("text").value="";
+
 };
 
-// 👀 leer comentarios
-const q = query(collection(db, "comments"), orderBy("date", "desc"));
+const q=query(
+collection(db,"comments"),
+orderBy("date","desc")
+);
 
-onSnapshot(q, (snapshot) => {
-  const container = document.getElementById("comments");
-  container.innerHTML = "";
+onSnapshot(q,(snapshot)=>{
 
-  snapshot.forEach((doc) => {
-    const c = doc.data();
+const container=document.getElementById("comments");
 
-    container.innerHTML += `
-      <div class="comment-box">
-        <div class="comment-name">${c.name}</div>
-        <div class="comment-text">${c.text}</div>
-      </div>
-    `;
-  });
+container.innerHTML="";
+
+snapshot.forEach((doc)=>{
+
+const c=doc.data();
+
+container.innerHTML += `
+<div class="comment-box">
+
+<div class="comment-name">
+${c.name}
+</div>
+
+<div class="comment-text">
+${c.text}
+</div>
+
+</div>
+`;
+
 });
+
+});
+
+</script>
+
+<!-- PARTÍCULAS -->
+<script>
+
+for(let i=0;i<100;i++){
+
+    let p=document.createElement("div");
+    p.classList.add("particle");
+
+    let colors=[
+        "#00e5ff",
+        "#ff5500",
+        "#00ff99",
+        "#ffffff",
+        "#ff1744"
+    ];
+
+    p.style.background=
+        colors[Math.floor(Math.random()*colors.length)];
+
+    p.style.left=Math.random()*100+"vw";
+    p.style.top=Math.random()*100+"vh";
+
+    p.style.animationDuration=
+        (Math.random()*18+8)+"s";
+
+    document.body.appendChild(p);
+}
+
 </script>
 
 </body>

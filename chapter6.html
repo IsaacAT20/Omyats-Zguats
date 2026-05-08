@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Capítulo 6 — PRIME</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-08KST0QMX5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-08KST0QMX5');
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#020617;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Fondo */
+.bg-image{
+    position:fixed;
+    inset:0;
+    background:url('akir-valast.jpg') center/cover no-repeat;
+    opacity:0.05;
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left, rgba(0,229,255,0.15), transparent 35%),
+    radial-gradient(circle at top right, rgba(255,85,0,0.15), transparent 35%),
+    radial-gradient(circle at bottom center, rgba(255,255,255,0.04), transparent 45%),
+    rgba(0,0,0,0.92);
+    z-index:-2;
+}
+
+/* Partículas */
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    opacity:0.4;
+    animation:float linear infinite;
+    z-index:-1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
+}
+
+/* Glow */
+.glow-blue{
+    color:#00e5ff;
+    text-shadow:0 0 12px #00e5ff,0 0 35px #00e5ff;
+}
+
+.glow-orange{
+    color:#ff5500;
+    text-shadow:0 0 12px #ff5500,0 0 35px #ff5500;
+}
+
+.glow-red{
+    color:#ff1a1a;
+    text-shadow:0 0 12px #ff1a1a,0 0 35px #ff0000;
+}
+
+.glow-white{
+    color:#ffffff;
+    text-shadow:0 0 12px #ffffff,0 0 25px #ffffff;
+}
+
+/* Contenedor */
+.story-container{
+    max-width:1050px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.chapter-box{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:55px;
+    backdrop-filter:blur(12px);
+    box-shadow:0 0 50px rgba(0,0,0,0.6);
+}
+
+.chapter-title{
+    text-align:center;
+    font-size:72px;
+    font-weight:bold;
+    margin-bottom:10px;
+    letter-spacing:3px;
+}
+
+.chapter-subtitle{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:70px;
+    letter-spacing:5px;
+}
+
+/* Texto */
+.story-text{
+    font-size:20px;
+    line-height:2.1;
+    color:#d6d6d6;
+}
+
+.story-text p{
+    margin-bottom:32px;
+}
+
+/* Separadores */
+.divider{
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right, transparent, #444, transparent);
+    margin:60px 0;
+}
+
+/* Botones */
+.nav-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:70px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:14px;
+    font-weight:bold;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.btn-blue{
+    border:1px solid #00e5ff;
+    color:#00e5ff;
+    background:rgba(0,229,255,0.05);
+}
+
+.btn-blue:hover{
+    background:#00e5ff;
+    color:black;
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(0,229,255,0.5);
+}
+
+.btn-orange{
+    border:1px solid #ff5500;
+    color:#ff5500;
+    background:rgba(255,85,0,0.05);
+}
+
+.btn-orange:hover{
+    background:#ff5500;
+    color:black;
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(255,85,0,0.5);
+}
+
+/* Responsive */
+@media(max-width:700px){
+
+.chapter-title{
+    font-size:44px;
+}
+
+.chapter-box{
+    padding:30px;
+}
+
+.story-text{
+    font-size:17px;
+    line-height:1.9;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-image"></div>
+<div class="overlay"></div>
+
+<!-- Partículas -->
+<script>
+for(let i=0;i<90;i++){
+
+    let p=document.createElement("div");
+    p.classList.add("particle");
+
+    let colors=["#00e5ff","#ff5500","#ffffff","#ff0000"];
+
+    p.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+    p.style.left=Math.random()*100+"vw";
+    p.style.top=Math.random()*100+"vh";
+
+    p.style.animationDuration=(Math.random()*18+8)+"s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+<div class="story-container">
+
+<div class="chapter-box">
+
+<h1 class="chapter-title glow-white">
+PRIME
+</h1>
+
+<p class="chapter-subtitle">
+CAPÍTULO 6
+</p>
+
+<div class="story-text">
+
+<p>
+El campo de batalla había quedado en silencio.
+</p>
+
+<p>
+Un silencio imposible.
+</p>
+
+<p>
+AbiSaTi ya no existía.
+</p>
+
+<p>
+Solo quedaban cenizas negras dispersándose lentamente entre el viento.
+</p>
+
+<p>
+AkiR permanecía inmóvil frente al cuerpo destruido.
+</p>
+
+<p>
+Sus manos seguían cubiertas de fuego oscuro mientras respiraba con dificultad.
+</p>
+
+<p>
+Y poco a poco…
+</p>
+
+<p>
+comenzó a entender lo que había hecho.
+</p>
+
+<p>
+El odio que la había sostenido durante años desapareció de golpe.
+</p>
+
+<p>
+Solo quedó vacío.
+</p>
+
+<p>
+Sus rodillas temblaron.
+</p>
+
+<p>
+Miró las cenizas de AbiSaTi.
+</p>
+
+<p>
+Luego miró a ValAst.
+</p>
+
+<p class="glow-red">
+Y el terror la atravesó completamente.
+</p>
+
+<p>
+Porque él no estaba reaccionando.
+</p>
+
+<p>
+No gritaba.
+</p>
+
+<p>
+No lloraba.
+</p>
+
+<p>
+No intentaba detenerla.
+</p>
+
+<p>
+Solo permanecía ahí…
+</p>
+
+<p>
+con la cabeza agachada.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Los Omyats comenzaron a retroceder lentamente.
+</p>
+
+<p>
+Sin AbiSaTi, nadie sabía qué hacer.
+</p>
+
+<p>
+RadTor intentaba reorganizar a los soldados, pero incluso él parecía perdido.
+</p>
+
+<p>
+GloSco apenas podía mantenerse de pie observando las cenizas de su padre.
+</p>
+
+<p>
+JorGlot respiraba con dificultad mientras intentaba acercarse a ValAst.
+</p>
+
+<p class="glow-blue">
+—ValAst…
+</p>
+
+<p>
+No hubo respuesta.
+</p>
+
+<p>
+Entonces el suelo volvió a temblar.
+</p>
+
+<p>
+Más fuerte esta vez.
+</p>
+
+<p>
+Todos levantaron la mirada.
+</p>
+
+<p>
+Varias aeronaves humanas descendieron desde el cielo cubierto de humo mientras enormes focos iluminaban el campo destruido.
+</p>
+
+<p>
+Soldados armados comenzaron a desplegarse rápidamente.
+</p>
+
+<p>
+Y en medio de todos ellos…
+</p>
+
+<p class="glow-white">
+descendió Al May Arco.
+</p>
+
+<p>
+El líder humano observó el desastre con el rostro completamente serio.
+</p>
+
+<p>
+Cadáveres.
+</p>
+
+<p>
+Fuego.
+</p>
+
+<p>
+Viento descontrolado.
+</p>
+
+<p>
+Omyats y Zguats destruidos por igual.
+</p>
+
+<p>
+Entonces habló.
+</p>
+
+<p class="glow-white">
+—¡DETENGAN EL COMBATE! ¡ESTO TERMINA HOY!
+</p>
+
+<p>
+Su voz resonó por todo el campo.
+</p>
+
+<p>
+Y durante un instante…
+</p>
+
+<p>
+pareció funcionar.
+</p>
+
+<p>
+Los soldados comenzaron a bajar sus armas lentamente.
+</p>
+
+<p>
+Los Zguats dejaron de avanzar.
+</p>
+
+<p>
+Los Omyats apenas podían reaccionar.
+</p>
+
+<p>
+Pero entonces…
+</p>
+
+<p class="glow-red">
+el piso volvió a temblar.
+</p>
+
+<div class="divider"></div>
+
+<p>
+ValAst seguía inmóvil.
+</p>
+
+<p>
+Y aun así…
+</p>
+
+<p>
+todo alrededor de él estaba cambiando.
+</p>
+
+<p>
+El aire vibraba.
+</p>
+
+<p>
+El cielo comenzó a oscurecerse rápidamente mientras enormes nubes negras giraban sobre el campo de batalla.
+</p>
+
+<p class="glow-blue">
+Rayos.
+</p>
+
+<p class="glow-orange">
+Viento.
+</p>
+
+<p class="glow-white">
+Lluvia.
+</p>
+
+<p class="glow-red">
+Fuego.
+</p>
+
+<p>
+Todo apareció al mismo tiempo.
+</p>
+
+<p>
+Como si la naturaleza hubiera perdido completamente el control.
+</p>
+
+<p>
+Los humanos observaron horrorizados.
+</p>
+
+<p>
+—¿Qué demonios es eso…?
+</p>
+
+<p>
+Los cuatro puntos en los ojos de ValAst comenzaron a brillar con más intensidad.
+</p>
+
+<p class="glow-red">
+Rojo.
+</p>
+
+<p class="glow-orange">
+Dorado.
+</p>
+
+<p class="glow-white">
+Plateado.
+</p>
+
+<p class="glow-blue">
+Negro.
+</p>
+
+<p>
+Entonces él levantó lentamente la cabeza.
+</p>
+
+<p class="glow-red">
+Y todos sintieron lo mismo.
+</p>
+
+<p>
+Miedo.
+</p>
+
+<p>
+Puro.
+</p>
+
+<p>
+Instintivo.
+</p>
+
+<p>
+Animal.
+</p>
+
+<div class="divider"></div>
+
+<p>
+El viento explotó primero.
+</p>
+
+<p>
+Una onda invisible atravesó todo el campo y lanzó soldados, Zguats y Omyats en todas direcciones.
+</p>
+
+<p>
+Varias estructuras colapsaron instantáneamente.
+</p>
+
+<p>
+Los rayos comenzaron a caer alrededor de ValAst mientras fuego negro recorría el suelo como si estuviera vivo.
+</p>
+
+<p class="glow-blue">
+Y entonces ocurrió algo imposible.
+</p>
+
+<p>
+Agua comenzó a elevarse desde la tierra destruida.
+</p>
+
+<p>
+Giraba alrededor de él junto al viento y las llamas.
+</p>
+
+<p class="glow-white">
+Los cuatro elementos.
+</p>
+
+<p>
+Controlados al mismo tiempo.
+</p>
+
+<p>
+Nadie entendía cómo.
+</p>
+
+<p>
+Nadie entendía qué estaba viendo.
+</p>
+
+<div class="divider"></div>
+
+<p class="glow-orange">
+—¡ATAQUEN!
+</p>
+
+<p>
+Decenas avanzaron hacia ValAst al mismo tiempo.
+</p>
+
+<p>
+No lograron tocarlo.
+</p>
+
+<p>
+El propio aire alrededor de él reaccionó solo.
+</p>
+
+<p>
+Los cuerpos quedaron detenidos a varios metros de distancia.
+</p>
+
+<p>
+Inmóviles.
+</p>
+
+<p>
+Suspendidos en el aire.
+</p>
+
+<p>
+Como si el viento los estuviera aplastando desde todas direcciones.
+</p>
+
+<p>
+Algunos comenzaron a gritar.
+</p>
+
+<p>
+Otros ni siquiera podían respirar.
+</p>
+
+<p>
+ValAst ni siquiera los miró.
+</p>
+
+<p>
+Y lentamente…
+</p>
+
+<p class="glow-red">
+todos cayeron inconscientes contra el suelo.
+</p>
+
+<div class="divider"></div>
+
+<p class="glow-blue">
+—¡VALAST!
+</p>
+
+<p>
+GloSco corrió hacia él desesperadamente.
+</p>
+
+<p>
+—¡Escúchame! ¡Por favor!
+</p>
+
+<p>
+Por un instante pareció que ValAst reaccionaría.
+</p>
+
+<p>
+Pero entonces…
+</p>
+
+<p class="glow-red">
+GloSco salió disparado violentamente contra una pared destruida.
+</p>
+
+<p>
+El sonido de los huesos rompiéndose resonó por todo el lugar.
+</p>
+
+<p>
+JorGlot gritó su nombre.
+</p>
+
+<p>
+RadTor intentó avanzar.
+</p>
+
+<p>
+Ninguno logró acercarse.
+</p>
+
+<p>
+El viento alrededor de ValAst ya no parecía un poder.
+</p>
+
+<p class="glow-red">
+Parecía una entidad viva.
+</p>
+
+<p>
+Furiosa.
+</p>
+
+<div class="divider"></div>
+
+<p>
+AkiR finalmente reaccionó.
+</p>
+
+<p class="glow-orange">
+—¡VALAST!
+</p>
+
+<p>
+Su voz atravesó el caos.
+</p>
+
+<p>
+Y por primera vez…
+</p>
+
+<p>
+él volteó a verla.
+</p>
+
+<p>
+El mundo entero pareció detenerse.
+</p>
+
+<p>
+Los cuatro puntos en sus ojos cambiaron otra vez.
+</p>
+
+<p>
+Más color.
+</p>
+
+<p>
+Más brillo.
+</p>
+
+<p>
+Más intensidad.
+</p>
+
+<p>
+Y AkiR inmediatamente sintió que algo aplastaba su cuerpo.
+</p>
+
+<p>
+Intentó respirar.
+</p>
+
+<p>
+No pudo.
+</p>
+
+<p>
+El oxígeno alrededor desaparecía.
+</p>
+
+<p>
+Sus piernas cedieron lentamente mientras llevaba las manos al cuello.
+</p>
+
+<p>
+ValAst la observaba sin emoción.
+</p>
+
+<p>
+Sin amor.
+</p>
+
+<p>
+Sin odio.
+</p>
+
+<p class="glow-red">
+Como si ya no la reconociera.
+</p>
+
+<p>
+AkiR cayó de rodillas.
+</p>
+
+<p>
+Inmóvil.
+</p>
+
+<p>
+Viva.
+</p>
+
+<p>
+Pero completamente incapaz de moverse.
+</p>
+
+<p>
+Y por primera vez desde niña…
+</p>
+
+<p class="glow-orange">
+sintió miedo de morir.
+</p>
+
+<div class="divider"></div>
+
+<p class="glow-white">
+—¡DISPAREN!
+</p>
+
+<p>
+Las armas humanas comenzaron a activarse inmediatamente.
+</p>
+
+<p>
+Balas adaptativas.
+</p>
+
+<p>
+Descargas de energía.
+</p>
+
+<p>
+Misiles inhibidores.
+</p>
+
+<p>
+La misma tecnología que antes había funcionado contra Omyats y Zguats.
+</p>
+
+<p>
+Todo fue lanzado al mismo tiempo.
+</p>
+
+<p class="glow-red">
+Ningún ataque llegó.
+</p>
+
+<p>
+A varios metros de ValAst…
+</p>
+
+<p>
+todo cayó.
+</p>
+
+<p>
+Helicópteros.
+</p>
+
+<p>
+Drones.
+</p>
+
+<p>
+Armas.
+</p>
+
+<p>
+Soldados.
+</p>
+
+<p>
+Como si la gravedad hubiera cambiado alrededor de él.
+</p>
+
+<p>
+Las aeronaves comenzaron a explotar en el cielo una tras otra.
+</p>
+
+<p>
+El fuego iluminó las nubes negras.
+</p>
+
+<p>
+Los humanos comenzaron a correr.
+</p>
+
+<p>
+Demasiado tarde.
+</p>
+
+<div class="divider"></div>
+
+<p>
+ValAst avanzó lentamente.
+</p>
+
+<p>
+Paso a paso.
+</p>
+
+<p>
+Y cada paso destruía más.
+</p>
+
+<p>
+El viento atravesaba cuerpos.
+</p>
+
+<p>
+El fuego consumía estructuras enteras.
+</p>
+
+<p>
+Los rayos partían la tierra.
+</p>
+
+<p>
+Agua y escombros giraban violentamente alrededor suyo como una tormenta viva.
+</p>
+
+<p class="glow-red">
+Humanos.
+</p>
+
+<p class="glow-blue">
+Omyats.
+</p>
+
+<p class="glow-orange">
+Zguats.
+</p>
+
+<p>
+No importaba quién intentara detenerlo.
+</p>
+
+<p>
+Todos caían.
+</p>
+
+<p class="glow-red">
+Todos.
+</p>
+
+<div class="divider"></div>
+
+<p>
+JorGlot apenas logró levantar la cabeza entre los escombros.
+</p>
+
+<p>
+Miró a su mejor amigo alejándose lentamente hacia el bosque destruido.
+</p>
+
+<p>
+Y entendió algo horrible.
+</p>
+
+<p class="glow-red">
+Ya no podían salvarlo.
+</p>
+
+<div class="divider"></div>
+
+<p>
+ValAst desapareció entre los árboles mientras la tormenta continuaba siguiéndolo.
+</p>
+
+<p>
+Nadie se atrevió a perseguirlo.
+</p>
+
+<p>
+Detrás de él…
+</p>
+
+<p>
+solo quedaban ruinas.
+</p>
+
+<p>
+Fuego.
+</p>
+
+<p>
+Cadáveres.
+</p>
+
+<p class="glow-white">
+Y silencio.
+</p>
+
+</div>
+
+<!-- BOTONES -->
+<div class="nav-buttons">
+
+<button class="btn btn-blue" onclick="go('chapter5.html')">
+⬅ Capítulo 5
+</button>
+
+<button class="btn btn-orange" onclick="go('index.html')">
+ Home
+</button>
+
+</div>
+
+</div>
+</div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
