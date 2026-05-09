@@ -266,12 +266,83 @@ body::before{
 .comment-text{
     color:#ccc;
 }
+/* =========================
+   PRIME SYSTEM OVERLAY (NUEVO SIN TOCAR TU CSS)
+========================= */
 
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 25% 30%, rgba(0,229,255,0.06), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,0,60,0.05), transparent 45%),
+    radial-gradient(circle at center, rgba(255,255,255,0.02), transparent 60%);
+
+    pointer-events:none;
+    z-index:-3;
+    animation:primeShift 8s infinite linear;
+}
+
+@keyframes primeShift{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(12px);}
+}
+
+/* =========================
+   GLITCH LAYER (CINEMATIC SYSTEM SHIFT)
+========================= */
+
+.prime-glitch{
+    position:fixed;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.02),
+        transparent 2px,
+        transparent 4px
+    );
+    opacity:0.12;
+    z-index:-2;
+    animation:glitchMove 6s infinite linear;
+}
+
+@keyframes glitchMove{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(20px);}
+}
+
+/* =========================
+   FLASH EVENT (SISTEMA VIVO)
+========================= */
+
+.system-flash{
+    position:fixed;
+    inset:0;
+    background:white;
+    opacity:0;
+    z-index:9999;
+    animation:flashPulse 10s infinite;
+}
+
+@keyframes flashPulse{
+    0%{opacity:0;}
+    2%{opacity:0.1;}
+    4%{opacity:0;}
+    60%{opacity:0;}
+    62%{opacity:0.08;}
+    64%{opacity:0;}
+    100%{opacity:0;}
+}
 </style>
 </head>
 
 <body>
-
+<!-- PRIME SYSTEM LAYERS (NUEVO) -->
+<div class="prime-glitch"></div>
+<div class="system-flash"></div>
 <!-- NAVBAR -->
 <header class="flex justify-between items-center px-10 py-4 border-b border-gray-800">
 
@@ -289,6 +360,14 @@ body::before{
 </header>
 
 <!-- HERO -->
+ <div style="position:relative;z-index:2;">
+    <div class="glow-blue" style="letter-spacing:6px;opacity:0.7;">
+        SYSTEM STATUS: STABLE
+    </div>
+    <div class="glow-red" style="letter-spacing:4px;opacity:0.5;margin-top:5px;">
+        PRIME SIGNAL DETECTED
+    </div>
+</div>
 <section class="relative text-center py-20 overflow-hidden">
 
     <img src="akir-valast.jpg"
